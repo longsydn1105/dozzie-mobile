@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <!-- Login Fragment -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.dozziehotel.ui.auth.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.dozziehotel.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_bookingFragment"
+            app:destination="@id/bookingFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_invoiceFragment"
+            app:destination="@id/invoiceFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_myBookingFragment"
+            app:destination="@id/myBookingFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_controlRoomFragment"
+            app:destination="@id/controlRoomFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <!-- Register Fragment -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.dozziehotel.ui.auth.RegisterFragment"
+        tools:layout="@layout/fragment_register" />
+
+    <!-- Booking Fragment -->
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="com.example.dozziehotel.ui.booking.BookingFragment"
+        android:label="Đặt phòng"
+        tools:layout="@layout/fragment_booking">
+
+        <action
+            android:id="@+id/action_bookingFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Invoice Fragment -->
+    <fragment
+        android:id="@+id/invoiceFragment"
+        android:name="com.example.dozziehotel.ui.invoice.InvoiceFragment"
+        android:label="Thanh toán"
+        tools:layout="@layout/fragment_invoice">
+
+        <action
+            android:id="@+id/action_invoiceFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- My Booking Fragment -->
+    <fragment
+        android:id="@+id/myBookingFragment"
+        android:name="com.example.dozziehotel.ui.booking.MyBookingFragment"
+        android:label="Chuyến Đi Của Tôi"
+        tools:layout="@layout/fragment_my_booking">
+        <action
+            android:id="@+id/action_myBookingFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Control Room Fragment -->
+    <fragment
+        android:id="@+id/controlRoomFragment"
+        android:name="com.example.dozziehotel.ui.control.ControlRoomFragment"
+        android:label="Điều khiển phòng"
+        tools:layout="@layout/fragment_control_room">
+        <argument android:name="room_id" app:argType="string" />
+        <argument android:name="digital_key" app:argType="string" />
+        <argument android:name="booking_id" app:argType="string" />
+
+        <action
+        android:id="@+id/action_controlRoomFragment_to_chatFragment"
+        app:destination="@id/chatFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <!-- Chat Fragment -->
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.dozziehotel.ui.chat.ChatFragment"
+        android:label="Hỗ trợ trực tuyến">
+        <argument android:name="bookingId" app:argType="string" />
+        <argument android:name="roomId" app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,19 @@
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.gradle/
+build/
+
+# Android Specific
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Secrets
+app/google-services.json
+
+# OS rác
+.DS_Store

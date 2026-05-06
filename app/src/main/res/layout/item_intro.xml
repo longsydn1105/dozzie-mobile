@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    android:background="@color/bg_main">
+
+    <!-- Bên trái: Nội dung chữ -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KHÔNG GIAN CÁ NHÂN"
+            android:textColor="@color/dozzie_blue"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
+
+        <TextView
+            android:id="@+id/tvMainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Nhỏ Gọn &amp;\nRiêng Tư."
+            android:textColor="@color/dozzie_navy"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:lineSpacingExtra="4dp" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Thế giới riêng của bạn chỉ trong một viên nén. Cách âm tốt, đèn đọc sách, ổ cắm sạc ngay tầm tay."
+            android:textColor="#666666"
+            android:textSize="13sp"
+            android:lineSpacingExtra="4dp" />
+
+        <Button
+            android:id="@+id/btnExplore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/dozzie_navy"
+            android:paddingHorizontal="16dp"
+            android:minHeight="40dp"
+            android:text="Xem Kén Nam/Nữ"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:cornerRadius="24dp" />
+    </LinearLayout>
+
+    <!-- Bên phải: Ảnh -->
+    <ImageView
+        android:id="@+id/ivIntro"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/index_1" />
+
+</LinearLayout>

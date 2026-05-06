@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dozzie 360 View</title>
+    <!-- Nhúng CSS & JS của Pannellum từ CDN để nhẹ app -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+        #panorama { width: 100%; height: 100vh; margin: 0; padding: 0; }
+        body { margin: 0; }
+    </style>
+</head>
+<body>
+<div id="panorama"></div>
+<script>
+    pannellum.viewer('panorama', {
+        "type": "equirectangular",
+        "panorama": "room_360.png", // Tên ảnh của bạn
+        "autoLoad": true,
+        "autoRotate": -2,
+        "showControls": false, // Tắt nút zoom của JS để dùng cảm ứng của Android
+        "orientationOn": false,
+        "draggable": true,
+        "friction": 0.1,
+        "pitch": 0,           // Góc nhìn mặc định (ngang)
+        "minPitch": -85,      // Cho phép nhìn xuống dưới (dọc)
+        "maxPitch": 85
+    });
+    // HÀM KÍCH HOẠT CẢM BIẾN
+        function start360() {
+            viewer.startOrientation();
+        }
+
+        // Lắng nghe sự kiện chạm vào màn hình để bật cảm biến
+        document.body.addEventListener('touchstart', function() {
+            start360();
+        }, { once: true });
+
+        document.body.addEventListener('click', function() {
+            start360();
+        }, { once: true });
+</script>
+</body>
+</html>

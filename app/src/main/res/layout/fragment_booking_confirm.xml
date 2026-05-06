@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvConfirmTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Xac nhan dat phong"
+        android:textColor="@color/dozzie_navy"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBookingSummary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="1dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvConfirmTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvRoomIdLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phong:"
+                android:textColor="@color/dozzie_navy"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvRoomIdValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/dozzie_blue"
+                app:layout_constraintBottom_toBottomOf="@id/tvRoomIdLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvRoomIdLabel"
+                app:layout_constraintTop_toTopOf="@id/tvRoomIdLabel"
+                tools:text="M-01" />
+
+            <TextView
+                android:id="@+id/tvPackageLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Goi:"
+                android:textColor="@color/dozzie_navy"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRoomIdLabel" />
+
+            <TextView
+                android:id="@+id/tvPackageValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/dozzie_blue"
+                app:layout_constraintBottom_toBottomOf="@id/tvPackageLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvPackageLabel"
+                app:layout_constraintTop_toTopOf="@id/tvPackageLabel"
+                tools:text="Combo Nghi Trua - 3 gio" />
+
+            <TextView
+                android:id="@+id/tvStartTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Bat dau:"
+                android:textColor="@color/dozzie_navy"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPackageLabel" />
+
+            <TextView
+                android:id="@+id/tvStartTimeValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/dozzie_navy"
+                app:layout_constraintBottom_toBottomOf="@id/tvStartTimeLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvStartTimeLabel"
+                app:layout_constraintTop_toTopOf="@id/tvStartTimeLabel"
+                tools:text="2026-03-31T14:30:00.000Z" />
+
+            <TextView
+                android:id="@+id/tvEndTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Ket thuc:"
+                android:textColor="@color/dozzie_navy"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStartTimeLabel" />
+
+            <TextView
+                android:id="@+id/tvEndTimeValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/dozzie_navy"
+                app:layout_constraintBottom_toBottomOf="@id/tvEndTimeLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvEndTimeLabel"
+                app:layout_constraintTop_toTopOf="@id/tvEndTimeLabel"
+                tools:text="2026-03-31T17:30:00.000Z" />
+
+            <TextView
+                android:id="@+id/tvTotalPriceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Tong tien:"
+                android:textColor="@color/dozzie_navy"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEndTimeLabel" />
+
+            <TextView
+                android:id="@+id/tvTotalPriceValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/dozzie_blue"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tvTotalPriceLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvTotalPriceLabel"
+                app:layout_constraintTop_toTopOf="@id/tvTotalPriceLabel"
+                tools:text="150,000 VND" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvConfirmError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/status_danger"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardBookingSummary"
+        tools:text="Phong nay da co nguoi dat trong khung gio ban chon."
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnConfirmBooking"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_primary_button"
+        android:text="Xac nhan dat phong"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvConfirmError" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

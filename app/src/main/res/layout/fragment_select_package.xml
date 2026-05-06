@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvSelectPackageTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Chon goi dich vu"
+        android:textColor="@color/dozzie_navy"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSelectedStartTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Gio bat dau: --"
+        android:textColor="@color/dozzie_blue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSelectPackageTitle"
+        tools:text="Gio bat dau: 2026-03-31T14:30:00.000Z" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvServicePackages"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/btnContinueToConfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSelectedStartTime"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_room" />
+
+    <TextView
+        android:id="@+id/tvPackageError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/status_danger"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btnContinueToConfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Vui long chon 1 goi dich vu"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnContinueToConfirm"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_primary_button"
+        android:text="Xac nhan goi da chon"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

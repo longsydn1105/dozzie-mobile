@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Màu nền đỏ nhạt (Opacity khoảng 10-15%) -->
+    <solid android:color="#FEE2E2" />
+    <!-- Bo góc nhẹ -->
+    <corners android:radius="4dp" />
+</shape>
